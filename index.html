@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" media="(max-width : 675px)" href="./css/mobile.css">
+  <title>BENEPICTURE</title>
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#headers").load("./static/header.html");
+    });
+  </script>
+</head>
+
+<body>
+  <header id="headers"></header>
+  <section>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./images/img1.png" style="width:100%">
+        <!-- <div class="text">Caption Text</div> -->
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="./images/img2.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="./images/img3.png" style="width:100%">
+      </div>
+    </div>
+
+    <div class="introduction">
+      <div id="intro_text">
+        <span id="intro_title">Benepicture</span><br>
+        <span id="intro_subtitle">가장 효과적인 모바일 광고 플랫폼을 소개합니다.</span>
+      </div>
+
+      <div id="intro_button">
+        <button id="introfile" onclick="location.href='./download/benepicture.pdf'">매체 소개서</button>
+        <button id="adfile">광고 가이드</button>
+      </div>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+
+        setTimeout(showSlides, 8000); // Change image every 2 seconds
+      }
+    </script>
+  </section>
+
+  <footer>© Copyright 2019 Dayonglee</footer>
+</body>
+
+</html>

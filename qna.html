@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" media="(max-width : 675px)" href="./css/mobile.css">
+  <title>BENEPICTURE</title>
+</head>
+
+<body>
+  <header>
+      <a class="title" href="./index.html" target="_self">
+        <img src="./images/bp_logo.png" style="height : 36px;"><span style="font-size: 40px;">Benepicture</span>
+      </a>
+
+      <nav class="nav_menu">
+        <a href="./about.html" target="_self">About</a>
+        <a href="./contact.html" target="_self">Contact</a>
+        <a href="./question.html" target="_self">AD</a>
+        <a href="./qna.html" target="_self">QNA</a>
+      </nav>
+  </header>
+
+  <section class="subtitle" style="background: #c3eba1">
+    <div class="subtitle_box">Q & A</div>
+  </section>
+
+  <section id="main_body">
+
+    <HR>
+    <div class="qna_title" onclick="on_off()">
+      ➤ 왜 베네픽처인가요?
+    </div>
+
+    <div class="qna_body" style="display: none">
+      베네픽처 aaaaa
+    </div>
+
+    <HR>
+    <div class="qna_title" onclick="on_off()">
+      ➤ 베네픽처의 장점
+    </div>
+
+    <div class="qna_body" style="display: none">
+      베네픽처 bbbbb
+    </div>
+
+
+    <HR>
+  </section>
+
+  <footer>© Copyright 2019 Dayonglee</footer>
+
+  <script>
+    var acc = document.getElementsByClassName("qna_title");
+    var i;
+
+    for(i=0;i<acc.length ; i++){
+      acc[i].addEventListener("click", function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display == "block"){
+          panel.style.display = "none";
+        }
+        else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

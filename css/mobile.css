@@ -1,0 +1,27 @@
+header{
+  height : 125px;
+}
+
+.title{
+  float : none;
+  margin-bottom : 10px;
+}
+
+.nav_menu{
+  padding : 0 10px 0 10px;
+  float : none;
+}
+
+.nav_menu > a{
+  margin : 0 10px 0 10px;
+}
+
+#map_image{
+  display: block;
+  width : 100%;
+}
+
+#about_image{
+  display: block;
+  width : 100%;
+}
